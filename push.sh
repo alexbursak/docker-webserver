@@ -5,7 +5,7 @@ TAG='latest'
 
 if [[ -z "$ARG" ]]
 then
-    TAG='latest'
+    TAG='amd'
 else
     TAG=$ARG
 fi
