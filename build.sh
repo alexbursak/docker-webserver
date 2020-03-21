@@ -24,4 +24,4 @@ echo "Architecuture - $TYPE"
 echo "Tag - $TAG"
 echo "-------------------------"
 
-docker build -t alexbursak/webserver:"$TAG" "$MY_PATH/arch/$TYPE"
+docker build -f "$TYPE".Dockerfile -t alexbursak/webserver:"$TAG" .
