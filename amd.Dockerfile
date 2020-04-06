@@ -11,6 +11,7 @@ RUN add-apt-repository ppa:ondrej/php
 RUN apt-get update
 RUN apt -y install php7.4 && \
     apt-get install php7.4-xml -y && \
+    apt-get install php7.4-mbstring -y && \
     apt-get install php-mysql -y && \
     apt-get install php7.4-zip -y
 
@@ -20,7 +21,8 @@ RUN apt-get install apache2 -y && \
     apt-get install systemd -y && \
     apt-get install curl -y && \
     apt-get install composer -y && \
-    apt-get install vim -y
+    apt-get install vim -y && \
+    apt-get install mysql-client -y
 
 RUN a2enmod rewrite
 RUN mkdir -p /var/www/project
