@@ -28,6 +28,8 @@ RUN apt-get install apache2 -y && \
 RUN curl -sL https://deb.nodesource.com/setup_12.x | bash - && \
     apt install nodejs -y
 
+ENV TZ Europe/London
+
 RUN a2enmod rewrite
 RUN mkdir -p /var/www/project
 
