@@ -24,6 +24,10 @@ RUN apt-get install apache2 -y && \
     apt-get install vim -y && \
     apt-get install mysql-client -y
 
+# Install node and npm
+RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
+RUN apt install nodejs -y
+
 RUN a2enmod rewrite
 RUN mkdir -p /var/www/project
 
